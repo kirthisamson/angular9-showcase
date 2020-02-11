@@ -1,0 +1,5 @@
+<p>item-list works!</p>
+
+<div *ngFor="let product of products">
+  <app-item [product]="product" (order)="onOrder()"></app-item>
+</div>
