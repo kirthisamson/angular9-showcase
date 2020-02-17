@@ -1,5 +1,7 @@
-<p>item-list works!</p>
-
-<div *ngFor="let product of products">
-  <app-item [product]="product" (order)="onOrder()"></app-item>
+<div style="text-align:center">
+  <p>item-list works!</p>
+  {{ products.length }}
+  <div *ngFor="let product of products">
+    <app-item [product]="product" (order)="onOrder()"></app-item>
+  </div>
 </div>

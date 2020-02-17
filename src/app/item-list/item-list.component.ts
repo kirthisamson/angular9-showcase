@@ -7,21 +7,33 @@ import { Product } from "../models/product";
   styleUrls: ["./item-list.component.scss"]
 })
 export class ItemListComponent implements OnInit {
-  private products: Product[] = [
-    {
-      id: 1,
-      name: "Ferrari",
-      description: "The prancing stallion"
-    },
-    {
-      id: 2,
-      name: "Mercedes",
-      description: "The Silver Arrow"
-    }
-  ];
+  public products: Product[];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.products = [
+      {
+        id: 1,
+        name: "Ferrari",
+        description: "The prancing stallion"
+      },
+      {
+        id: 2,
+        name: "Mercedes",
+        description: "The Silver Arrow"
+      },
+      {
+        id: 1,
+        name: "Ferrari",
+        description: "The prancing stallion"
+      },
+      {
+        id: 2,
+        name: "Mercedes",
+        description: "The Silver Arrow"
+      }
+    ];
+  }
 
   onOrder() {
     window.alert("Congrats!! your order is placed");
